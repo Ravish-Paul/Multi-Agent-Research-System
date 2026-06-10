@@ -1,8 +1,11 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
 llm_model = ChatGoogleGenerativeAI(
-    model="gemini-3.5-flash"
+    model="gemini-2.5-flash",
+    google_api_key=os.getenv("GOOGLE_API_KEY")
 )
+
