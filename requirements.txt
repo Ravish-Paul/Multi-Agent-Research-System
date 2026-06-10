@@ -1,8 +1,11 @@
-langchain
-langchain-google-genai
-python-dotenv
 streamlit
+langchain
 langgraph
-faiss-cpu
 langchain-community
+langchain-google-genai
+langchain-huggingface
+faiss-cpu
+sentence-transformers
 pypdf
+ddgs
+python-dotenv
