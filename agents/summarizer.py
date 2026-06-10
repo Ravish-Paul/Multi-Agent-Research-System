@@ -17,5 +17,12 @@ def summarize_agent(research):
     chain = summary_prompt | llm_model
     response = chain.invoke({"topic":research})
     print("====Summary====")
-    print(response.content[0]["text"])
-    return response.content[0]["text"]
+
+    content = response.content
+
+    if isinstance(content, list):
+        content = content[0]["text"]
+
+    print(content)
+
+    return content

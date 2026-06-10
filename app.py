@@ -45,8 +45,6 @@ if st.button("Research"):
             )
         )
 
-    with st.expander("Final Report", expanded=True):
-        st.write(result.get("report", ""))
     report = result["report"]
 
     if isinstance(report, list):
