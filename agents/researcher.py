@@ -41,5 +41,5 @@ def research_agent(topic, pdf_path=None):
     print("\n===== RAG CONTEXT =====\n")
     print(context[:2000])
     print("=======Model Research Response======")
-    print(response.content)
-    return context, response.content
+    print(response.content[0]["text"])
+    return context, response.content[0]["text"]

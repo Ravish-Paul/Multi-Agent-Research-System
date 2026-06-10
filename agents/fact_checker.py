@@ -20,5 +20,5 @@ def fact_checker_agent(research):
     chain = fact_check_prompt | llm_model
     response = chain.invoke({"research": research})
     print("=====Fact Checker=====")
-    print(response.content)
-    return response.content
+    print(response.content[0]["text"])
+    return response.content[0]["text"]

@@ -27,5 +27,5 @@ def writer_agent(summary):
     chain = report_writer | llm_model
     response = chain.invoke({"summary": summary})
     print("====writer====")
-    print(response.content)
-    return response.content
+    print(response.content[0]["text"])
+    return response.content[0]["text"]
